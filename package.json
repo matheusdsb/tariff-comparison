@@ -1,0 +1,23 @@
+{
+  "name": "tariff-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusdsb/tariff-comparison.git"
+  },
+  "author": "Matheus Dias Sabino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusdsb/tariff-comparison/issues"
+  },
+  "homepage": "https://github.com/matheusdsb/tariff-comparison#readme",
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  }
+}
