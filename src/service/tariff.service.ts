@@ -23,7 +23,7 @@ export class TariffService {
     }
 
     renderComparison() {
-        console.log(`---- Showing comparison for ${this._consumptionPerYearInKWh.toString()} kWh/year comsuption: ---`);
+        console.log(`---- Showing comparison for ${this._consumptionPerYearInKWh.toString()} kWh/year consumption: ---`);
         this.tariffs.forEach(tariff => console.log(`Tariff name: ${tariff.getName()} | Annual cost: ${tariff.annualCost.toString()} Euros`));
         console.log("\n");        
     }
