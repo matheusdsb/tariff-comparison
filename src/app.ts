@@ -15,7 +15,7 @@ const showTariffComparison = (consumptionPerYearInKWh: number) => {
     showTariffComparison(4500);
     showTariffComparison(6000);
  } catch(error) {
-    console.log('An error has ocurred: ' + error.message);
+    console.log('An error has occurred: ' + error.message);
  }
 
 
