@@ -38,7 +38,14 @@ export class TariffService {
         this.validate('Please fill the tariffs array before trying to render it');
 
         console.log(`---- Showing comparison for ${this._consumptionPerYearInKWh.toString()} kWh/year consumption: ---`);
-        this.tariffs.forEach(tariff => console.log(`Tariff name: ${tariff.getName()} | Annual cost: ${tariff.annualCost.toString()} Euros`));
+        
+        this.tariffs.forEach(
+            tariff => console.log(
+                `Tariff name: ${tariff.getName()} | ` +
+                `Annual cost: ${tariff.annualCost.toString()} Euros`
+            )
+        );
+        
         console.log("\n");        
     }
 }
