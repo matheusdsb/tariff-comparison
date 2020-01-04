@@ -1,9 +1,13 @@
-import { expect } from 'chai';
+import { expect, assert } from 'chai';
 import { Tariff } from '../model/tariff.model';
 import { BasicElectricityTariff } from '../model/basic-electricity-tariff.model';
 import { PackagedTariff } from '../model/packaged-tariff.model';
 
 describe('BasicElectricityTariff.annualCost', () => {
+
+    it('Consumption = -1 => Should return Error', () => {    
+        assert.throws(() => new BasicElectricityTariff(-1), Error);
+    });
 
     it('Consumption = 3500 => Should return 830', () => {
         const basicElectricityTariff : Tariff = new BasicElectricityTariff(3500);
@@ -22,6 +26,10 @@ describe('BasicElectricityTariff.annualCost', () => {
 });
 
 describe('PackagedTariff.annualCost', () => {
+
+    it('Consumption = null => Should return Error', () => {    
+        assert.throws(() => new PackagedTariff(null), Error);
+    });
 
     it('Consumption = 3500 => Should return 800', () => {
         const packagedTariff : Tariff = new PackagedTariff(3500);
