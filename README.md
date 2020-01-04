@@ -17,3 +17,7 @@ Run `npm start` at the project root folder, therefore the results of each compar
 ## Running and watching test results
 
 Run `npm run start-test-watch` at the project root folder. The result of the comparison will be printed (just like the option npm start) and besides that all the test cases will be executed and it will be shown.
+
+## Changing input parameters
+
+To execute the comparison with different values, open the file `app.ts` into the `src` folder and write on it another calls of the method `showTariffComparison` with any value do you want.
