@@ -1,11 +1,12 @@
 {
   "name": "tariff-comparison",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple application that receives as input the annual consumption of the user (in KWh) and shows  how much would cost (in Euros) each of the available products",
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-test-watch": "tsc && node dist/app.js && ./node_modules/ts-mocha/bin/ts-mocha -p ./tsconfig.json ./**/*.test.ts -w --watch-extensions ts",
+    "test": "nyc mocha '**/*.test.ts'"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,12 @@
   },
   "homepage": "https://github.com/matheusdsb/tariff-comparison#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "ts-mocha": "^6.0.0",
     "typescript": "^3.7.4"
   }
 }
