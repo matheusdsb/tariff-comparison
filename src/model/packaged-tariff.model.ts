@@ -22,7 +22,7 @@ export class PackagedTariff extends Tariff {
     };
 
     constructor(consumptionPerYear: number) {
-        super();
+        super(consumptionPerYear);
         this.annualCost = this.calculateAnnualCost(consumptionPerYear);
     }
 }
